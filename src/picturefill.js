@@ -209,7 +209,9 @@
 
 			// Loop through all elements
 			for ( i = 0; i < plen; i++ ) {
-				pf.fillImg(elements[ i ], options);
+                if (elements[i]) {
+                    pf.fillImg(elements[ i ], options);
+                }
 			}
 
 			pf.teardownRun( options );

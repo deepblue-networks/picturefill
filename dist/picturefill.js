@@ -1,6 +1,6 @@
-/*! picturefill - v3.0.2 - 2016-02-12
+/*! picturefill - v3.0.3 - 2018-01-24
  * https://scottjehl.github.io/picturefill/
- * Copyright (c) 2016 https://github.com/scottjehl/picturefill/blob/master/Authors.txt; Licensed MIT
+ * Copyright (c) 2018 https://github.com/scottjehl/picturefill/blob/master/Authors.txt; Licensed MIT
  */
 /*! Gecko-Picture - v1.0
  * https://github.com/scottjehl/picturefill/tree/3.0/src/plugins/gecko-picture
@@ -282,7 +282,9 @@
 
 			// Loop through all elements
 			for ( i = 0; i < plen; i++ ) {
-				pf.fillImg(elements[ i ], options);
+                if (elements[i]) {
+                    pf.fillImg(elements[ i ], options);
+                }
 			}
 
 			pf.teardownRun( options );
